@@ -8,7 +8,6 @@ RUN rpm --import http://packages.confluent.io/rpm/1.0/archive.key && \
     yum install -y confluent-kafka-rest && \
     yum clean all
 
-ADD ./kafka-rest.properties /etc/kafka-rest/kafka-rest.properties
 ADD ./run.sh /srv/run.sh
 
 CMD ./srv/run.sh
